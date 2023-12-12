@@ -1,7 +1,10 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { EXAMPLE_PATH, CMS_NAME } from "@/lib/constants";
-import Header from "@/components/header";
+import Header from "@/components/Header";
+import Searchheader from "@/components/SearchHeader";
+import SpeciesHeader from "@/components/SpeciesHeader";
+import LinkHeader from "@/components/LinkHeader";
 
 export const metadata = {
   title: `Next.js and ${CMS_NAME} Example`,
@@ -52,6 +55,9 @@ export default function RootLayout({
       <body>
         <section className="min-h-screen">
           <Header />
+          <Searchheader />
+          <LinkHeader />
+          <SpeciesHeader />
           <main>{children}</main>
           <Footer />
         </section>
