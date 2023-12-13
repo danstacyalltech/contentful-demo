@@ -17,6 +17,7 @@ import { getAllPosts, getPostAndMorePosts } from "@/lib/api"
 //   }))
 // }
 
+///////////////////////////////////////////////////////////////////////
 export async function generateStaticParams() {
   try {
     const allPosts = await getAllPosts(true);
@@ -37,6 +38,7 @@ export async function generateStaticParams() {
     return [];
   }
 }
+/////////////////////////////////////////////////////////////////////////
 
 export default async function PostPage({
   params,

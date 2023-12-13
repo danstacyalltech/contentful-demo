@@ -1,10 +1,10 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { EXAMPLE_PATH, CMS_NAME } from "@/lib/constants"
-import Searchheader from "@/components/SearchHeader"
-import SpeciesHeader from "@/components/SpeciesHeader"
-import LinkHeader from "@/components/LinkHeader"
-import Header from "@/components/Header"
+import Searchheader from "@/app/components/SearchHeader"
+import SpeciesHeader from "@/app/components/SpeciesHeader"
+import LinkHeader from "@/app/components/LinkHeader"
+import Header from "@/app/components/Header"
 
 export const metadata = {
   title: `Next.js and ${CMS_NAME} Example`,
