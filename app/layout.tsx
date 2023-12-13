@@ -4,6 +4,7 @@ import { EXAMPLE_PATH, CMS_NAME } from "@/lib/constants"
 import Searchheader from "@/components/SearchHeader"
 import SpeciesHeader from "@/components/SpeciesHeader"
 import LinkHeader from "@/components/LinkHeader"
+import Header from "@/components/Header"
 
 export const metadata = {
   title: `Next.js and ${CMS_NAME} Example`,
@@ -53,6 +54,7 @@ export default function RootLayout({
       className={inter.variable}>
       <body>
         <section className="min-h-screen">
+          <Header />
           <Searchheader />
           <LinkHeader />
           <SpeciesHeader />
