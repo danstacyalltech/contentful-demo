@@ -9,16 +9,33 @@ import CoverImage from "../../cover-image"
 import { Markdown } from "@/lib/markdown"
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api"
 
+// export async function generateStaticParams() {
+//   const allPosts = await getAllPosts(true)
+
+//   return allPosts.map((post) => ({
+//     slug: post.slug,
+//   }))
+// }
+
 export async function generateStaticParams() {
-  const allPosts = await getAllPosts(true)
+  try {
+    const allPosts = await getAllPosts(true);
 
-  if (!allPosts) {
-    return null
+    // Check if allPosts is defined and is an array
+    if (Array.isArray(allPosts)) {
+      return allPosts.map((post) => ({
+        slug: post.slug,
+      }));
+    } else {
+      // Handle the case where getAllPosts did not return an array
+      console.error("Error: getAllPosts did not return an array.");
+      return [];
+    }
+  } catch (error) {
+    // Handle any other errors that might occur during the async operation
+    console.error("Error fetching posts:", error);
+    return [];
   }
-
-  return allPosts.map((post) => ({
-    slug: post.slug,
-  }))
 }
 
 export default async function PostPage({
