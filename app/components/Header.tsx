@@ -1,17 +1,19 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
 function Header() {
   return (
-		<header className="flex items-center justify-around">
-		<Image
-			src="https://creative.alltech.com/m/451c4ab6778e6040/Digital_PNG-Alltech-logo-terracotta-black.png"
-			alt="Alltech Logo"
-			width={200}
-			height={200}
-			className="pl-4"
-			/>
-			<nav className="flex items-center pr-4">
+    <header className="flex items-center justify-around">
+      <Link href="/">
+        <Image
+          src="https://creative.alltech.com/m/451c4ab6778e6040/Digital_PNG-Alltech-logo-terracotta-black.png"
+          alt="Alltech Logo"
+          width={200}
+          height={200}
+          className="pl-4"
+        />
+      </Link>
+      <nav className="flex items-center pr-4">
         <div className="flex items-center">
           <Image
             src={
@@ -81,6 +83,7 @@ function Header() {
         <Image src={} alt="" width={} height={}/>. */}
       </nav>
     </header>
-  )};
+  )
+}
 
-	export default Header;
+export default Header
