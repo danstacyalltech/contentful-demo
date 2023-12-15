@@ -90,7 +90,7 @@ export default async function PostPage({
           </div>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl text-2xl mx-auto">
           <div className="prose">
             <Markdown content={post.content} />
           </div>
